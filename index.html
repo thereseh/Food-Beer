@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Lobster' rel='stylesheet' type='text/css'>
+    <title>What To Eat</title>
+    <!-- Import jQuery -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="header">
+        <div id="topBar">
+            <ul id="nav">
+                <li id="food" class="active">Food</li>
+                <li id="beer">Beer</li>
+            </ul>
+        </div>
+        <h1 id="headerText">What's for Dinner?</h1>
+
+        <div id="controls">
+            <button type="button" id="search">OK
+                <br />
+            </button>
+            <input id="searchterm" type="text" size="30" maxlength="20" value="Chicken" />
+            <button type="button" id="random">Random!</button>
+            <div id="foodControls">
+                <label><b>Cuisine</b>
+                    <select id="cuisine">
+                        <option value="null">None</option>
+                        <option value="american">American</option>
+                        <option value="italian">Italian</option>
+                        <option value="asian">Asian</option>
+                        <option value="mexican">Mexican</option>
+                        <option value="southern & soul food">Southern & Soul Food</option>
+                        <option value="french">French</option>
+                        <option value="southwestern">Southwestern</option>
+                        <option value="barbecue">Barbecue</option>
+                        <option value="indian">Indian</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="cajun & creole">Cajun & Creole</option>
+                        <option value="english">English</option>
+                        <option value="mediterranean">Mediterranean</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="german">German</option>
+                        <option value="thai">Thai</option>
+                        <option value="moroccan">Moroccan</option>
+                        <option value="irish">Irish</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="cuban">Cuban</option>
+                        <option value="hawaii">Hawaiin</option>
+                        <option value="swedish">Swedish</option>
+                        <option value="hungarian">Hungarian</option>
+                        <option value="portugese">Portugese</option>
+                    </select>
+                </label>
+                <label><b>Course</b>
+                    <select id="course">
+                        <option value="null">None</option>
+                        <option value="Main Dishes">Main Dishes</option>
+                        <option value="Desserts">Desserts</option>
+                        <option value="Side Dishes">Side Dishes</option>
+                        <option value="Lunch & Snacks">Lunch & Snacks</option>
+                        <option value="Appetizers">Appetizers</option>
+                        <option value="Salads">Salads</option>
+                        <option value="Breads">Breads</option>
+                        <option value="Breakfast and Brunch">Breakfast and Brunch</option>
+                        <option value="Soups">Soups</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Condiments and Sauces">Condiments and Sauces</option>
+                        <option value="Cocktails">Cocktails</option>
+                    </select>
+                </label>
+                <form>
+                    <b>Allergens:</b> &emsp;
+                    <input type="checkbox" id="dairy" value="396^Dairy-Free" unchecked>Dairy &emsp;
+                    <input type="checkbox" id="egg" value="397^Egg-Free">Egg &emsp;
+                    <input type="checkbox" id="gluten" value="393^Gluten-Free">Gluten &emsp;
+                    <input type="checkbox" id="peanut" value="394^Peanut-Free">Peanut &emsp;
+                    <input type="checkbox" id="seafood" value="398^Seafood-Free">Seafood &emsp;
+                    <input type="checkbox" id="soy" value="400^Soy-Free">Soy &emsp;
+                    <input type="checkbox" id="sulfite" value="401^Sulfite-Free">Sulfite &emsp;
+                    <input type="checkbox" id="sesame" value="399^Sesame-Free">Sesame &emsp;
+                    <input type="checkbox" id="treenut" value="395^Tree Nut-Free">Tree Nut &emsp;
+                    <input type="checkbox" id="wheat" value="392^Wheat-Free">Wheat
+                </form>
+            </div>
+
+            <div id="beerControls">
+                <br>
+                <label><b>Categories</b>
+                    <select id="categories">
+                        <option value="null">None</option>
+                        <option value="1">British Origin Ales</option>
+                        <option value="2">Irish Origin Ales</option>
+                        <option value="3">North American Origin Ales</option>
+                        <option value="4">German Origin Ales</option>
+                        <option value="5">Belgian And French Origin Ales</option>
+                        <option value="6">International Ale Styles</option>
+                        <option value="7">European-germanic Lager</option>
+                        <option value="8">North American Lager</option>
+                        <option value="9">Other Lager</option>
+                        <option value="10">International Styles</option>
+                        <option value="11">Hybrid/mixed Beer</option>
+                        <option value="12">Mead, Cider, & Perry</option>
+                    </select>
+                </label>
+                <label><b>Year Vintage</b>
+                    <select id="year">
+                    </select>
+                </label>
+                <form>
+                    <input type="checkbox" id="organic" unchecked>Organic &emsp;
+                    <input type="checkbox" id="labels">With Labels Only &emsp;
+                    <input type="checkbox" id="brewery">Brewery Information
+                </form>
+                <label for="amount" id="ABVLabel">ABV:</label>
+                <input type="text" id="amount" readonly style="font-weight:bold;">
+                <div id="slider-range"></div>
+            </div>
+        </div>
+    </div>
+    <div id="nextPrevButtons1">
+        <button type="button" id="prevButton1">Prev</button>
+        <button type="button" id="nextButton1">Next</button>
+    </div>
+    <div id="myLoader">
+        <img src="content/ajax-loader.gif" alt="Please wait..." class="Spinner hidden" id="Spinner-first" />
+        <div id="dynamicContent">
+        </div>
+    </div>
+    <div id="nextPrevButtons2">
+        <button type="button" id="prevButton2">Prev</button>
+        <button type="button" id="nextButton2">Next</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</body>
+
+</html>

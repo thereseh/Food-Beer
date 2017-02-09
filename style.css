@@ -1,0 +1,242 @@
+        * {
+            font-family: 'Helvetica', serif;
+        }
+        
+        h1 {
+            font-size: 60px;
+            font-family: 'Lobster', cursive;
+        }
+
+        h3 {
+            text-align: center;
+        }
+        
+        h2 {
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+        }
+        
+        
+        div {
+            margin-top: 0;
+            margin-right: auto;
+            margin-bottom: 0;
+            margin-left: auto;
+            text-align: center;
+        }
+        
+        #dynamicContent {
+            overflow: auto;
+            width: 70%;
+            margin-bottom: 20px;
+        }
+        
+        #controls {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        #header {
+            width: 70%;
+            height: auto;
+            padding-bottom: 30px;
+            padding-top: 5px;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url(content/tomatoes.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        div.image {
+            float: left;
+            height: flex;
+            width: 35%;
+            font-size: 14px;
+            text-align: left;
+            padding-bottom: 30px;
+        }
+        
+        label {
+            margin-left: 20px;
+        }
+        
+        div.content {
+            float: left;
+            font-size: 14px;
+            text-align: center;
+            height: auto;
+            width: 65%;
+            padding-bottom: 30px;
+        }
+        
+        #search,
+        #random {
+            box-shadow: inset 0px 1px 0px 0px #fffae6;
+            background-color: #ffcc00;
+            border-radius: 6px;
+            border: 1px solid #ffcc00;
+            display: inline-block;
+            cursor: pointer;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 13px;
+            text-decoration: none;
+            margin-right: 2em;
+        }
+        
+        #random {
+            display: none;
+            margin-left: 2em;
+        }
+        
+        #search,
+        #random:hover {
+            background-color: #ffdb4d;
+        }
+        
+        #search,
+        #random:active {
+            position: relative;
+            top: 1px;
+        }
+        
+        form {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        
+        input[type='checkbox'] {
+            margin-bottom: 8px;
+        }
+        
+        #nextButton1,
+        #nextButton2 {
+            visibility: hidden;
+        }
+        
+        #prevButton1,
+        #prevButton2 {
+            visibility: hidden;
+        }
+        
+        #nextPrevButtons1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #beerControls {
+            display: none;
+        }
+        
+        #searchterm {
+            border-color: #cccccc;
+            border-style: solid;
+            padding: 6px;
+            text-align: left;
+            border-width: 1px;
+            font-size: 14px;
+            border-radius: 7px;
+            box-shadow: 0px 0px 9px 0px rgba(42, 42, 42, .20);
+        }
+        
+        #searchterm:focus {
+            outline: none;
+        }
+        
+        img {
+            width: 90%;
+            height: auto;
+            margin-top: 30px;
+            padding-bottom: 5px;
+        }
+        
+        #topBar {
+            width: 100%;
+            height: 30px;
+            background-color: #ffc266;
+            box-shadow: 0px 2px 2px #737373;
+        }
+        
+        #topBar ul {
+            width: 80%;
+            margin: 0 auto 0 auto;
+        }
+        
+        #topBar ul li {
+            float: left;
+            color: #000000;
+            padding: 0 15px 0 15px;
+            margin-right: -1px;
+            border-right: 1px solid #000;
+            border-left: 1px solid #000;
+            height: 30px;
+            list-style: none;
+            display: block;
+            line-height: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        #topBar ul li:hover {
+            background-color: #fff5e6;
+        }
+        
+        .active {
+            background-color: #e68a00;
+        }
+        
+        #amount {
+            background-color: transparent;
+            font-size: 16px;
+            border-style: none;
+            box-sizing: border-box;
+            width: 75px;
+            padding-right: 10px;
+            padding-left: 7px;
+        }
+        
+        #ABVLabel {
+            align-content: center;
+        }
+        
+        #categories {
+            margin-top: 20px;
+        }
+        
+        #cuisine {
+            margin-top: 20px;
+        }
+        
+        .ui-slider .ui-slider-handle {
+            width: 15px;
+            height: 15px;
+            border-radius: 20px;
+        }
+        
+        #slider-range {
+            top: 4px;
+            width: 30%;
+            height: 10px;
+        }
+        
+        #myLoader {
+            align-content: center;
+        }
+        
+        .slider {
+            height: 10px;
+        }
+        
+        .Spinner {
+            width: 50px;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        .Spinner.hidden {
+            display: none;
+        }
